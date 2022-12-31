@@ -1,6 +1,6 @@
 import { Productos } from "../../mock";
 import "./CartFinish.css";
-import { addDoc, collection, doc, getFirestore, updateDoc, writeBatch } from "firebase/firestore";
+import { addDoc, collection, getFirestore, updateDoc, writeBatch } from "firebase/firestore";
 
 const CartFinish = () => {
   const sendOrder = () => {
@@ -21,7 +21,7 @@ const CartFinish = () => {
   
     const db = getFirestore();
     const ordersCollection = collection(db, "Orders");
-    addDoc(ordersCollection,order).then(({id})=> alert(id))
+    addDoc(ordersCollection,order).then(({id})=> alert("Orden Generada"))
   }
 
   return (
@@ -51,7 +51,7 @@ const CartFinish = () => {
         );
       })}
       <div>
-        <button onClick={()=>sendOrder()}>Generar order</button>
+        <button onClick={()=>sendOrder()}>Generar orden</button>
       </div>
     </div>
   );

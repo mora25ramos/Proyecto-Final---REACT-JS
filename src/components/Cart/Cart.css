@@ -10,8 +10,9 @@
 }
 
 .cart__count{
-    background-color: red;
-    width: auto;
+    background-color: pink;
+    width: 35px;
+    height: 35px;
     border-radius: 80%;
     padding: 1px;
     color: wheat;

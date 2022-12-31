@@ -7,7 +7,7 @@ const ItemDetailContainer =()=>{
     const {id} = useParams()
     const [producto,setProducto] = useState()
     useEffect(() =>{
-        const product = Productos.filter((p)=> p.id == id)
+        const product = Productos.filter((p)=> p.id === id)
         setProducto(product)
     },[id])
    return   producto ? <ItemDetail producto={producto} /> : <h1>Cargando</h1>

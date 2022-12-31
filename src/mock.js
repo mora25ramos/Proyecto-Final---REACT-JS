@@ -18,7 +18,7 @@ export  const categorias = [
         id:10,
           name:'Strapless',
           category: 1,
-          img:'https://chileautos.pxcrush.net/cars/dealer/7gv1hssw0ej5v53zh3t8uiaib.jpg?pxc_method=limitfill&pxc_bgtype=self&pxc_size=720,480',
+          img:'https://d3ugyf2ht6aenh.cloudfront.net/stores/238/214/products/crop_ss23_02711-302a4273fc01eb29bb16646584232421-640-0.webp',
           desc:'Top sin mangas color negro',
           price: 4900
         },
@@ -26,7 +26,7 @@ export  const categorias = [
         id:11,
         name:'Baby Tee',
         category:1,
-        img:'https://static.emol.cl/emol50/Fotos/2016/10/27/file_20161027185352.jpg',
+        img:'https://d3ugyf2ht6aenh.cloudfront.net/stores/238/214/products/crop_ss23_15341-2e9d68c007030f387e16646604228712-640-0.webp',
         desc:'Remera de algodon al cuerpo',
         price: 5200
   
@@ -35,7 +35,7 @@ export  const categorias = [
         id:12,
         name:'Jean Low',
         category:2,
-        img:'https://theline.cl/img/products/553558-163-1_640.png',
+        img:'http://d3ugyf2ht6aenh.cloudfront.net/stores/238/214/products/crop_ss23_00421-3e0fedbe6581eec2dd16646607762447-640-0.webp',
         desc:'Pantalon de jean tiro bajo',
         price: 16700
   
@@ -44,15 +44,15 @@ export  const categorias = [
         id:13,
         name:'Jean 70s',
         category:2,
-        img:'https://tobehonest.cl/wp-content/uploads/2018/07/gucci.jpg',
+        img:'https://d3ugyf2ht6aenh.cloudfront.net/stores/238/214/products/crop_fw22131271-415857f69cbf3cbbb116488455012197-640-0.webp',
         desc:'Pantalon de jean estilo setentoso',
         price: 18000
       },
       {
         id:13,
         name:'Mono biker',
-        category:2,
-        img:'https://tobehonest.cl/wp-content/uploads/2018/07/gucci.jpg',
+        category:3,
+        img:'http://d3ugyf2ht6aenh.cloudfront.net/stores/238/214/products/crop_fw22132341-6f9717bddf3679cbbb16489174772407-640-0.webp',
         desc:'Mono estilo biker',
         price: 6700
       },
@@ -60,16 +60,24 @@ export  const categorias = [
         id:13,
         name:'Vestido Strapless',
         category:3,
-        img:'https://tobehonest.cl/wp-content/uploads/2018/07/gucci.jpg',
+        img:'http://d3ugyf2ht6aenh.cloudfront.net/stores/238/214/products/crop_fw22122191-f947e3a1d5c0b5b80316490037364015-640-0.webp',
         desc:'Vestido sin mangas de algodon',
         price: 9900
       }
   
   ]
   
-  export const menus = [{
-      name:'Inicio',
-      href:'/'
-    },
-    ]
+export const menus = [{
+  name:'Inicio',
+  href:'/'
+  },
+  {
+    name:'Productos',
+    href:'/'
+  },
+  {
+    name:'Contacto',
+    href:'/'
+  }
+]
    

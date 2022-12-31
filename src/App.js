@@ -30,10 +30,10 @@ function App() {
 
   return (
     <BrowserRouter className="App">
-      <NavBar menus={menus} />
+      <NavBar menus={menus} categorias={categorias} />
       <Routes>
         <Route exact path="/category/:id" element={<ItemListContainer />} />
-        <Route exact path="/Item/:id" element={<ItemDetailContainer />} />
+        <Route exact path="/items/:id" element={<ItemDetailContainer />} />
         <Route exact path="/Cart" element={<CartFinish />} />
       </Routes>
     </BrowserRouter>
