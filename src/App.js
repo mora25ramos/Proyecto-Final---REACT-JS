@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import {
+  collection,
+  getDocs,
+  getFirestore,
+} from "firebase/firestore";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import NavBar from "./components/Navbar/Navbar";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import { menus } from "./mock";
+import CartFinish from "./components/CartFinish/CartFinish";
 
 function App() {
+  const [categorias, setCategorias] = useState([]);
+  useEffect(() => {
+    const db = getFirestore();
+
+    const categoryCollection = collection(db, "Categorias");
+
+    getDocs(categoryCollection).then((result) => {
+      if (result.size === 0) {
+        console.log("no retorna nada");
+      }
+      setCategorias(result.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+      console.log(categorias);
+    });
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter className="App">
+      <NavBar menus={menus} />
+      <Routes>
+        <Route exact path="/category/:id" element={<ItemListContainer />} />
+        <Route exact path="/Item/:id" element={<ItemDetailContainer />} />
+        <Route exact path="/Cart" element={<CartFinish />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
-
 export default App;

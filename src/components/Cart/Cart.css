@@ -1,0 +1,23 @@
+.shopping-cart{
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-img img{
+    width: 45px;
+    height: 45px;
+}
+
+.cart__count{
+    background-color: red;
+    width: auto;
+    border-radius: 80%;
+    padding: 1px;
+    color: wheat;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 10px;
+}
